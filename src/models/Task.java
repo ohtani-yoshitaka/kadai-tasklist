@@ -62,4 +62,13 @@ public class Task {
         this.updated_at = updated_at;
     }
 
+    public String getContent() {
+        return content;
+    }
+
+    public void setContent(String content) {
+        this.content = content;
+    }
+
+
 }
