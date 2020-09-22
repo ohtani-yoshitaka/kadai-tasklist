@@ -7,6 +7,14 @@
           <h2>ID : ${task.id} の編集ページ</h2>
 
           <form method="POST" action="${pageContext.request.contextPath}/update">
+              <c:if test="${errors != null}">
+                <div id="flush_error">
+                        入力内容にエラーがあります。<br />
+                    <c:forEach var="error" items="${errors}">
+                        <c:out value="${error}" /><br />
+                    </c:forEach>
+                </div>
+              </c:if>
               <%-- <c:import url="_form.jsp" /> --%>
               <label for="content">新規タスク</label><br />
               <input type="text" name="content" value="${task.content}" />
